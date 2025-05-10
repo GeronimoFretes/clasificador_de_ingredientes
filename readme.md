@@ -4,26 +4,42 @@ Este repositorio contiene todo el flujo de creación de un modelo de clasificaci
 
 ---
 
+## Demo Interactivo
+
+Prueba del modelo desde el navegador (usa la cámara web):
+
+**[Probar Clasificador en Vivo](https://geronimofretes.github.io/clasificador_de_ingredientes/)**
+
+Permitir el acceso a la cámara y usar el sitio desde HTTPS. El clasificador funciona en tiempo real usando el modelo exportado en ONNX.
+
+---
+
+**Repositorio en GitHub:**  
+[github.com/geronimofretes/clasificador_de_ingredientes](https://github.com/geronimofretes/clasificador_de_ingredientes)
+
+---
+
 ## Estructura del respositorio
 
 ```
 
 .
-├── src/
-│   ├── build\_dataset.py     # descarga imágenes y filtra con CLIP
-│   ├── split\_data.py        # reparte raw → train/val/test
-│   ├── train.py              # script de entrenamiento
-│   ├── eval.py               # script de evaluación
-│   ├── export\_onnx.py       # exporta el modelo a ONNX
-├── data/
-│   ├── raw/                  # imágenes originales descargadas
-│   └── split/                # train/ val/ test tras ejecutar split\_data.py
+├── data/                    # Ignorada por .gitignore — generada localmente
+│   ├── raw/                 # Imágenes originales para cada clase
+│   └── split/               # Imágenes divididas en train/val/test
 ├── models/
-│   └── best\_model.pth       # pesos del mejor modelo (resultado de train.py)
-├── classes.json              # mapeo índice → etiqueta
-├── requirements.txt          # dependencias Python
-└── README.md                 # este archivo
-
+│   ├── best_model.pth       # Modelo entrenado en formato PyTorch
+│   └── best_model.onnx      # Modelo exportado para inferencia web
+├── src/
+│   ├── build_dataset.py     # Scraper + filtro CLIP para construir el dataset
+│   ├── split_dataset.py     # División train/val/test
+│   ├── train.py             # Entrenamiento del modelo
+│   ├── eval.py              # Evaluación del modelo + métricas
+│   └── export_onnx.py       # Conversión del modelo a ONNX
+├── classes.json             # mapeo índice → ingrediente
+├── index.html               # Prueba en vivo del modelo ONNX usando la cámara del navegador
+├── requirements.txt         # Dependencias Python
+└── README.md                # Este archivo
 ```
 
 ---
@@ -78,7 +94,7 @@ Este repositorio contiene todo el flujo de creación de un modelo de clasificaci
      [--dynamic]
    ```
 
-   * Genera un archivo ONNX para llevar el modelo a aplicaciones web sin dependencias pesadas PyTorch.
+   * Genera un archivo ONNX para llevar el modelo a aplicaciones web sin dependencias pesadas de PyTorch.
    * `--dynamic` activa ejes de batch dinámico para flexibilidad en producción.
 
 
