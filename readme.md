@@ -14,11 +14,6 @@ Permitir el acceso a la cámara y usar el sitio desde HTTPS. El clasificador fun
 
 ---
 
-**Repositorio en GitHub:**  
-[github.com/geronimofretes/clasificador_de_ingredientes](https://github.com/geronimofretes/clasificador_de_ingredientes)
-
----
-
 ## Estructura del respositorio
 
 ```
@@ -123,3 +118,10 @@ pip install -r requirements.txt
   * Listas `CLASSES`, `CAPTION_LISTS`, `CLIP_PROMPTS`
 * En `src/split_data.py` modifica `SPLIT_RATIOS` para ajustar los ratios de partición de datos.
 * En `train.py` y `eval.py` hay flags para tamaño de batch, epochs, tasa de aprendizaje, ruta de datos y checkpoints.
+
+---
+
+**Repositorio en GitHub:**  
+[github.com/geronimofretes/clasificador_de_ingredientes](https://github.com/geronimofretes/clasificador_de_ingredientes)
+
+---
