@@ -38,10 +38,7 @@ htmlcov/
 
 # ──────────────────────────────────────────────────────────────────────────────
 # PyTorch / ML artifacts
-models/
-*.pth
 *.pt
-*.onnx
 *.onnx.*
 logs/
 tensorboard/
