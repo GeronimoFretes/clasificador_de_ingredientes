@@ -1,0 +1,20 @@
+# Core DL stack (CPU or GPU as needed)
+torch>=2.1.0
+torchvision>=0.17.0
+
+# CLIP wrapper
+open_clip_torch>=2.22.0
+
+# Async scraping + image I/O
+aiohttp>=3.9
+aiofiles>=23.2
+playwright>=1.43
+tqdm>=4.66
+Pillow>=10.2
+
+# ONNX export + quick validation
+onnx>=1.15
+onnxruntime>=1.17
+
+# OpenCV for any cv2-based ops (e.g. filters/heatmaps)
+opencv-python>=4.9.0

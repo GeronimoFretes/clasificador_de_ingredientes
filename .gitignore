@@ -1,0 +1,70 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+
+# Environment variable files
+.env*
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python caches & tooling
+.pytest_cache/
+.mypy_cache/
+
+# Coverage reports
+.coverage
+coverage/
+htmlcov/
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PyTorch / ML artifacts
+models/
+*.pth
+*.pt
+*.onnx
+*.onnx.*
+logs/
+tensorboard/
+runs/
+
+# Data directories
+data/raw/
+data/split/
+
+# Playwright browser downloads (if you ever install via `npx playwright install`)
+.playwright/
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Miscellaneous logs / outputs
+*.log
+*.csv
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
